@@ -9,13 +9,13 @@
     <meta name="description" content="During the coronavirus outbreak, I wanted to improve my math skills (Matrix Algebra) by taking the Matrix Algebra for engineers course taught by professor Jeffrey R. Chasnov from The Hong Kong Univers">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Classical cryptography - Hill Cipher">
-<meta property="og:url" content="http://habib-jawady.me/2020/04/13/Hill-Chipher/index.html">
+<meta property="og:url" content="http://habib-jawady.me/2020/04/13/Hill-Cipher/index.html">
 <meta property="og:site_name" content="Habib&#39;s Blog">
 <meta property="og:description" content="During the coronavirus outbreak, I wanted to improve my math skills (Matrix Algebra) by taking the Matrix Algebra for engineers course taught by professor Jeffrey R. Chasnov from The Hong Kong Univers">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://habib-jawady.me/gallery/thumbnails/hill.jpg">
 <meta property="article:published_time" content="2020-04-13T08:31:03.000Z">
-<meta property="article:modified_time" content="2020-04-13T15:38:53.675Z">
+<meta property="article:modified_time" content="2020-04-13T15:45:17.384Z">
 <meta property="article:author" content="Muhammad Habib Jawady">
 <meta property="article:tag" content="cryptography, cryptoanalysis, ctf">
 <meta name="twitter:card" content="summary">
@@ -323,17 +323,17 @@ mjx-container + br {
     <br/>
     <div id="share" style="display: none">
       <ul>
-  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://habib-jawady.me/2020/04/13/Hill-Chipher/" target="_blank" rel="noopener"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://twitter.com/share?url=http://habib-jawady.me/2020/04/13/Hill-Chipher/&text=Classical cryptography - Hill Cipher" target="_blank" rel="noopener"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://habib-jawady.me/2020/04/13/Hill-Chipher/&title=Classical cryptography - Hill Cipher" target="_blank" rel="noopener"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://habib-jawady.me/2020/04/13/Hill-Chipher/&is_video=false&description=Classical cryptography - Hill Cipher" target="_blank" rel="noopener"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=Classical cryptography - Hill Cipher&body=Check out this article: http://habib-jawady.me/2020/04/13/Hill-Chipher/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://getpocket.com/save?url=http://habib-jawady.me/2020/04/13/Hill-Chipher/&title=Classical cryptography - Hill Cipher" target="_blank" rel="noopener"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://reddit.com/submit?url=http://habib-jawady.me/2020/04/13/Hill-Chipher/&title=Classical cryptography - Hill Cipher" target="_blank" rel="noopener"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://habib-jawady.me/2020/04/13/Hill-Chipher/&title=Classical cryptography - Hill Cipher" target="_blank" rel="noopener"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://digg.com/submit?url=http://habib-jawady.me/2020/04/13/Hill-Chipher/&title=Classical cryptography - Hill Cipher" target="_blank" rel="noopener"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://habib-jawady.me/2020/04/13/Hill-Chipher/&name=Classical cryptography - Hill Cipher&description=" target="_blank" rel="noopener"><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://news.ycombinator.com/submitlink?u=http://habib-jawady.me/2020/04/13/Hill-Chipher/&t=Classical cryptography - Hill Cipher" target="_blank" rel="noopener"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://habib-jawady.me/2020/04/13/Hill-Cipher/" target="_blank" rel="noopener"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://habib-jawady.me/2020/04/13/Hill-Cipher/&text=Classical cryptography - Hill Cipher" target="_blank" rel="noopener"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://habib-jawady.me/2020/04/13/Hill-Cipher/&title=Classical cryptography - Hill Cipher" target="_blank" rel="noopener"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://habib-jawady.me/2020/04/13/Hill-Cipher/&is_video=false&description=Classical cryptography - Hill Cipher" target="_blank" rel="noopener"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Classical cryptography - Hill Cipher&body=Check out this article: http://habib-jawady.me/2020/04/13/Hill-Cipher/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://habib-jawady.me/2020/04/13/Hill-Cipher/&title=Classical cryptography - Hill Cipher" target="_blank" rel="noopener"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://habib-jawady.me/2020/04/13/Hill-Cipher/&title=Classical cryptography - Hill Cipher" target="_blank" rel="noopener"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://habib-jawady.me/2020/04/13/Hill-Cipher/&title=Classical cryptography - Hill Cipher" target="_blank" rel="noopener"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://habib-jawady.me/2020/04/13/Hill-Cipher/&title=Classical cryptography - Hill Cipher" target="_blank" rel="noopener"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://habib-jawady.me/2020/04/13/Hill-Cipher/&name=Classical cryptography - Hill Cipher&description=" target="_blank" rel="noopener"><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://news.ycombinator.com/submitlink?u=http://habib-jawady.me/2020/04/13/Hill-Cipher/&t=Classical cryptography - Hill Cipher" target="_blank" rel="noopener"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
@@ -438,17 +438,17 @@ Conclusion: <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align:
 
     <div id="share-footer" style="display: none">
       <ul>
-  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://habib-jawady.me/2020/04/13/Hill-Chipher/" target="_blank" rel="noopener"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://twitter.com/share?url=http://habib-jawady.me/2020/04/13/Hill-Chipher/&text=Classical cryptography - Hill Cipher" target="_blank" rel="noopener"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://habib-jawady.me/2020/04/13/Hill-Chipher/&title=Classical cryptography - Hill Cipher" target="_blank" rel="noopener"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://habib-jawady.me/2020/04/13/Hill-Chipher/&is_video=false&description=Classical cryptography - Hill Cipher" target="_blank" rel="noopener"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=Classical cryptography - Hill Cipher&body=Check out this article: http://habib-jawady.me/2020/04/13/Hill-Chipher/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://getpocket.com/save?url=http://habib-jawady.me/2020/04/13/Hill-Chipher/&title=Classical cryptography - Hill Cipher" target="_blank" rel="noopener"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://reddit.com/submit?url=http://habib-jawady.me/2020/04/13/Hill-Chipher/&title=Classical cryptography - Hill Cipher" target="_blank" rel="noopener"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://habib-jawady.me/2020/04/13/Hill-Chipher/&title=Classical cryptography - Hill Cipher" target="_blank" rel="noopener"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://digg.com/submit?url=http://habib-jawady.me/2020/04/13/Hill-Chipher/&title=Classical cryptography - Hill Cipher" target="_blank" rel="noopener"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://habib-jawady.me/2020/04/13/Hill-Chipher/&name=Classical cryptography - Hill Cipher&description=" target="_blank" rel="noopener"><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://news.ycombinator.com/submitlink?u=http://habib-jawady.me/2020/04/13/Hill-Chipher/&t=Classical cryptography - Hill Cipher" target="_blank" rel="noopener"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://habib-jawady.me/2020/04/13/Hill-Cipher/" target="_blank" rel="noopener"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://habib-jawady.me/2020/04/13/Hill-Cipher/&text=Classical cryptography - Hill Cipher" target="_blank" rel="noopener"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://habib-jawady.me/2020/04/13/Hill-Cipher/&title=Classical cryptography - Hill Cipher" target="_blank" rel="noopener"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://habib-jawady.me/2020/04/13/Hill-Cipher/&is_video=false&description=Classical cryptography - Hill Cipher" target="_blank" rel="noopener"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Classical cryptography - Hill Cipher&body=Check out this article: http://habib-jawady.me/2020/04/13/Hill-Cipher/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://habib-jawady.me/2020/04/13/Hill-Cipher/&title=Classical cryptography - Hill Cipher" target="_blank" rel="noopener"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://habib-jawady.me/2020/04/13/Hill-Cipher/&title=Classical cryptography - Hill Cipher" target="_blank" rel="noopener"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://habib-jawady.me/2020/04/13/Hill-Cipher/&title=Classical cryptography - Hill Cipher" target="_blank" rel="noopener"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://habib-jawady.me/2020/04/13/Hill-Cipher/&title=Classical cryptography - Hill Cipher" target="_blank" rel="noopener"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://habib-jawady.me/2020/04/13/Hill-Cipher/&name=Classical cryptography - Hill Cipher&description=" target="_blank" rel="noopener"><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://news.ycombinator.com/submitlink?u=http://habib-jawady.me/2020/04/13/Hill-Cipher/&t=Classical cryptography - Hill Cipher" target="_blank" rel="noopener"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
