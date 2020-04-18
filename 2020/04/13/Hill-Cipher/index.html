@@ -6,18 +6,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="During the coronavirus outbreak, I wanted to improve my math skills (Matrix Algebra) by taking the Matrix Algebra for engineers course taught by professor Jeffrey R. Chasnov from The Hong Kong Univers">
+    <meta name="description" content="During the coronavirus outbreak, I wanted to improve my math skills (Matrix Algebra) by taking the Matrix Algebra for engineers course taught by professor Jeffrey R. Chasnov from The Hong Kong Unive">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Classical cryptography - Hill Cipher">
 <meta property="og:url" content="http://habib-jawady.me/2020/04/13/Hill-Cipher/index.html">
 <meta property="og:site_name" content="Habib&#39;s Blog">
-<meta property="og:description" content="During the coronavirus outbreak, I wanted to improve my math skills (Matrix Algebra) by taking the Matrix Algebra for engineers course taught by professor Jeffrey R. Chasnov from The Hong Kong Univers">
+<meta property="og:description" content="During the coronavirus outbreak, I wanted to improve my math skills (Matrix Algebra) by taking the Matrix Algebra for engineers course taught by professor Jeffrey R. Chasnov from The Hong Kong Unive">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://habib-jawady.me/gallery/thumbnails/hill.jpg">
 <meta property="article:published_time" content="2020-04-13T08:31:03.000Z">
-<meta property="article:modified_time" content="2020-04-13T15:45:17.384Z">
+<meta property="article:modified_time" content="2020-04-14T07:04:30.589Z">
 <meta property="article:author" content="Muhammad Habib Jawady">
-<meta property="article:tag" content="cryptography, cryptoanalysis, ctf">
+<meta property="article:tag" content="cryptography">
+<meta property="article:tag" content="cryptoanalysis">
+<meta property="article:tag" content="ctf">
+<meta property="article:tag" content="algebra">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://habib-jawady.me/gallery/thumbnails/hill.jpg">
     
@@ -302,6 +305,8 @@ mjx-container + br {
           <li><a href="/">Home</a></li>
          
           <li><a href="/About/">About</a></li>
+         
+          <li><a href="/categories/">categories</a></li>
         
       </ul>
     </span>
@@ -369,11 +374,16 @@ mjx-container + br {
 
 
       
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="/categories/cryptography/">cryptography</a>
+    </div>
+
 
       
     <div class="article-tag">
         <i class="fas fa-tag"></i>
-        <a class="tag-link" href="/tags/cryptography-cryptoanalysis-ctf/" rel="tag">cryptography, cryptoanalysis, ctf</a>
+        <a class="tag-link" href="/tags/algebra/" rel="tag">algebra</a>, <a class="tag-link" href="/tags/cryptoanalysis/" rel="tag">cryptoanalysis</a>, <a class="tag-link" href="/tags/cryptography/" rel="tag">cryptography</a>, <a class="tag-link" href="/tags/ctf/" rel="tag">ctf</a>
     </div>
 
 
@@ -382,7 +392,11 @@ mjx-container + br {
   
 
   <div class="content" itemprop="articleBody">
-    <p>During the coronavirus outbreak, I wanted to improve my math skills (Matrix Algebra) by taking the <strong>Matrix Algebra for engineers</strong> course taught by professor Jeffrey R. <em>Chasnov from The Hong Kong University of Science and Technology</em> .<br>I recommend that course for those of you want to build somewhat of a foundation in Linear Algebra, as it explains useful algorithms used for solving linear equations, and performing basic operations on matrices which are handy in various CS subfields as we will see.<br>Taking this course reminded me of a classical cryptography cipher called the <strong>“Hill-Cipher”</strong>, which eventhough is insecure by nature (linear transformation),it can help newcomers to cryptography understand some of the primitive techniques used historically for secure communication (<em>other than caesar cipher</em>).<br>I hope this sequel of two articles will help you understand some new concepts ,and CTF players looking for ideas to break that polygraphic substitution they didn’t know the name of ;).<br>The first part <strong>Classical cryptography - Hill Cipher</strong> is an intoduction to cryptography, making some points clear about the underlying terminology and explaining the Hill Cipher for the purpose of encrypting and decrypting messages. This assumes a basic modular arithmetic and matrix manipulation skillset, eventhough you can do just fine with justt knowing what a modulo operator does and how to do matrix multiplication.<br>The second part, <strong>Cryptanalysis - Cracking the Hill Cipher</strong> we will cover the mathematical approach of cracking such cipher, introducing the discipline of cryptoanalysis.</p>
+    <hr>
+
+<p>During the coronavirus outbreak, I wanted to improve my math skills (Matrix Algebra) by taking the <strong>Matrix Algebra for engineers</strong> course taught by professor Jeffrey R. Chasnov from The <em>Hong Kong University of Science and Technology</em>.<br>I recommend that course for those of you want to build somewhat of a foundation in Linear Algebra, as it explains useful algorithms used for solving linear equations, and performing basic operations on matrices which are handy in various CS subfields as we will see.  </p>
+<p><img src="/gallery/thumbnails/hill.jpg" alt="">  </p>
+<p>Taking this course reminded me of a classical cryptography cipher called the <strong>“Hill-Cipher”</strong>, which eventhough is insecure by nature (linear transformation),it can help newcomers to cryptography understand some of the primitive techniques used historically for secure communication (<em>other than caesar cipher</em>).<br>I hope this sequel of two articles will help you understand some new concepts ,and CTF players looking for ideas to break that polygraphic substitution they didn’t know the name of ;).<br>The first part <strong>Classical cryptography - Hill Cipher</strong> is an intoduction to cryptography, making some points clear about the underlying terminology and explaining the Hill Cipher for the purpose of encrypting and decrypting messages. This assumes a basic modular arithmetic and matrix manipulation skillset, eventhough you can do just fine with justt knowing what a modulo operator does and how to do matrix multiplication.<br>The second part, <strong>Cryptanalysis - Cracking the Hill Cipher</strong> we will cover the mathematical approach of cracking such cipher, introducing the discipline of cryptoanalysis.</p>
 <h2 id="What-is-Cryptography"><a href="#What-is-Cryptography" class="headerlink" title="What is Cryptography?"></a>What is Cryptography?</h2><p>Cryptography is the discipline of studying techniques for secure communication in the presence of an adversary.<br>Basically it is used to keep messages, and basically any form of critical transactional data or important information being exchanged between two parties (<strong>A</strong>lice and <strong>B</strong>ob) or more, away from the hands of passive attackers (<em>E</em>ve) potentially “eavesdropping” or listening on messages. Note that cryptography seeks to transform messages, and not hide them from plain sight (steganography), in the form of one of two cryptographic proceedures:</p>
 <blockquote>
 <p>Code:   Replacing blocks of characters or words with others.</p>
@@ -434,6 +448,8 @@ Conclusion: <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align:
           <li><a href="/">Home</a></li>
          
           <li><a href="/About/">About</a></li>
+         
+          <li><a href="/categories/">categories</a></li>
         
       </ul>
     </div>
@@ -486,6 +502,8 @@ Conclusion: <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align:
           <li><a href="/">Home</a></li>
          
           <li><a href="/About/">About</a></li>
+         
+          <li><a href="/categories/">categories</a></li>
         
       </ul>
     </nav>
